@@ -4,13 +4,14 @@
  Funções decoradoras são funções que decoram outras funções.
  Decoradores são usados para fazer o Python usar as funções decoradoras em outras funções.
 """
-def criar_funcao(func):
+def criar_funcao(func): # Função decoradora
     def interna(*args, **kwargs):
+        print('Vou te decorar')
         for arg in args:
             checar_string(arg)
         resultado = func(*args, **kwargs)
-        #
-        return resultado()
+        print('Ok, você foi decorada')
+        return resultado
     return interna
 
 def inverte_string(string):
@@ -21,6 +22,5 @@ def checar_string(param):
         raise TypeError('param deve ser uma string')
 
 checagem_parametro = criar_funcao(inverte_string)
-
-invertida = inverte_string('123')
+invertida = checagem_parametro('123')
 print(invertida)

@@ -4,7 +4,7 @@
  Permutations - Ordem importa
  Product - Ordem importa e repete valores únicos
 """
-from itertools import combinations
+from itertools import combinations, permutations
 
 def print_iter(iterator):
     print(*list(iterator), sep='\n')
@@ -13,4 +13,5 @@ def print_iter(iterator):
 pessoas = ['João', 'Joana', 'Luiz', 'Letícia',]
 camisetas = [['preta', 'branca'],]
 
-print_iter(combinations(pessoas, 2)) # Combinação das pessoas em grupos de 2
+print_iter(combinations(pessoas, 2)) # Combinação das pessoas em grupos
+print_iter(permutations(pessoas, 2)) # Permutação das pessoas em grupos

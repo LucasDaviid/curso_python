@@ -15,7 +15,18 @@ lista_a = [1, 2, 3, 4, 5, 6, 7]
 lista_b = [1, 2, 3, 4]
 
 # Solução genérica (funcional em mais linguagens)
-lista_soma = []
-for i in range(len(lista_b)):
-    lista_soma.append(lista_a[i] + lista_b [i])
+
+# lista_soma = []
+# for i in range(len(lista_b)):
+#     lista_soma.append(lista_a[i] + lista_b [i])
+# print(lista_soma)
+
+# Soluções com recursos do Python
+
+# lista_soma = []
+# for i, _ in enumerate(lista_b): # Utilizamos o _ para solicitar apenas o índice
+#     lista_soma.append(lista_a[i] + lista_b [i])
+# print(lista_soma)
+
+lista_soma = [x + y for x, y in zip(lista_a, lista_b)]
 print(lista_soma)

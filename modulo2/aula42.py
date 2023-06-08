@@ -10,3 +10,12 @@ lista_b     = [1, 2, 3, 4]
 =================== resultado
 lista_soma  = [2, 4, 6, 8]
 """
+
+lista_a = [1, 2, 3, 4, 5, 6, 7]
+lista_b = [1, 2, 3, 4]
+
+# Solução genérica (funcional em mais linguagens)
+lista_soma = []
+for i in range(len(lista_b)):
+    lista_soma.append(lista_a[i] + lista_b [i])
+print(lista_soma)

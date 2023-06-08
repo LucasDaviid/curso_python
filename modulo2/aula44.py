@@ -14,9 +14,11 @@ pessoas = ['João', 'Joana', 'Luiz', 'Letícia',]
 camisetas = [
     ['preta', 'branca'],
     ['p', 'm', 'g', 'xg'],
+    ['masculino', 'feminino'],
+    ['algodão', 'poliéster'],
 ]
 
-# print_iter(combinations(pessoas, 2)) # Combinação das pessoas em grupos
-# print_iter(permutations(pessoas, 2)) # Permutação das pessoas em grupos
-print_iter(product(*camisetas))
+# print_iter(combinations(pessoas, 2)) 
+# print_iter(permutations(pessoas, 2))
+print_iter(product(*camisetas)) 
 

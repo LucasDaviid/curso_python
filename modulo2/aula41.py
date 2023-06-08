@@ -19,4 +19,4 @@ l1 = ['Salvador', 'Ubatuba', 'Belo Horizonte']
 l2 = ['BA', 'SP', 'MG', 'RJ']
 print(list(zip(l1, l2)))     # A função zip faz a mesma coisa mas retorna um interaitor.
 # Para visualizar o interaitor podemos consumi-lo com uma list ou usar um for.
-print(list(zip_longest(l1, l2)))  # Faz o mesmo que zip só que invertido, utilizando o valor da maior list .
+print(list(zip_longest(l1, l2, fillvalue='Cidade não informada')))  # Faz o mesmo que zip só que invertido, utilizando o valor da maior list .

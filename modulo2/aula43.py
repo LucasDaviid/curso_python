@@ -21,3 +21,4 @@ for i in c1:
 print('\nrange')
 for i in r1:
     print(i)
+    

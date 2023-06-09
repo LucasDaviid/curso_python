@@ -1,5 +1,6 @@
 #   map, partial, GeneratorType e esgotamento de Iterators
 from functools import partial # partial é uma funçao que retorna uma closure
+from types import GeneratorType # Verifica se é um generator type
 
 def print_inter(interator):
     print(*list(interator), sep='\n')
@@ -33,9 +34,15 @@ novos_produtos = map( # Passa a função em cada um dos produtos
     produtos
 )
 
+# Como sabe se é um iterator ou um generator?
+# novos_produtos = (x for x in produtos) - Esse é um generator
+# todo generator é um iterator mas nem todo iterator é um generator
+
 print(novos_produtos) # Retorna um map object
 print(hasattr(novos_produtos, '__iter__'))
 print(hasattr(novos_produtos, '__next__'))
 
 print_inter(produtos)
 print_inter(novos_produtos)
+
+print(isinstance(novos_produtos, GeneratorType)) # Retorna se é ou não um generator type

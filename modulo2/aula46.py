@@ -1,4 +1,5 @@
 #   map, partial, GeneratorType e esgotamento de Iterators
+from functools import partial # partial é uma funçao que retorna uma closure
 
 def print_inter(interator):
     print(*list(interator), sep='\n')
@@ -16,8 +17,10 @@ produtos = [
 def aumentar_porcentagem(valor, porcentagem):
     return round(valor * porcentagem, 2)
 
+aumentar_dez_porcento = partial(aumentar_porcentagem, porcentagem=1.1)
+
 novos_produtos = [
-    {**p, 'preco': aumentar_porcentagem(p['preco'], 1.1)} for p in produtos
+    {**p, 'preco': aumentar_dez_porcento(p['preco'])} for p in produtos
 ]
 
 print_inter(produtos)

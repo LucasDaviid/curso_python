@@ -28,9 +28,14 @@ aumentar_dez_porcento = partial(aumentar_porcentagem, porcentagem=1.1)
 def alterar_preco_produtos(produto):
     return {**produto, 'preco': aumentar_dez_porcento(produto['preco'])}
 
-novos_produtos = map(
-
+novos_produtos = map( # Passa a função em cada um dos produtos
+    alterar_preco_produtos, 
+    produtos
 )
+
+print(novos_produtos) # Retorna um map object
+print(hasattr(novos_produtos, '__iter__'))
+print(hasattr(novos_produtos, '__next__'))
 
 print_inter(produtos)
 print_inter(novos_produtos)

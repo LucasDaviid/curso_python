@@ -13,4 +13,12 @@ produtos = [
     {'nome': 'produto 4', 'preco': 69.90},
 ]
 
+def aumentar_porcentagem(valor, porcentagem):
+    return round(valor * porcentagem)
+
+novos_produtos = [
+    {**p, 'preco': aumentar_porcentagem(p['preco'], 1.1)} for p in produtos
+]
+
 print_inter(produtos)
+print_inter(novos_produtos)

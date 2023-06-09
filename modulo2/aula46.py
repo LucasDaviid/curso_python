@@ -14,7 +14,7 @@ produtos = [
 ]
 
 def aumentar_porcentagem(valor, porcentagem):
-    return round(valor * porcentagem)
+    return round(valor * porcentagem, 2)
 
 novos_produtos = [
     {**p, 'preco': aumentar_porcentagem(p['preco'], 1.1)} for p in produtos

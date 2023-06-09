@@ -1,4 +1,5 @@
 #   map, partial, GeneratorType e esgotamento de Iterators
+
 from functools import partial # partial é uma funçao que retorna uma closure
 from types import GeneratorType # Verifica se é um generator type
 
@@ -42,7 +43,17 @@ print(novos_produtos) # Retorna um map object
 print(hasattr(novos_produtos, '__iter__'))
 print(hasattr(novos_produtos, '__next__'))
 
+# print(list(novos_produtos)) # esgota o interator do map
+
 print_inter(produtos)
 print_inter(novos_produtos)
 
 print(isinstance(novos_produtos, GeneratorType)) # Retorna se é ou não um generator type
+
+# Como fazer o mapeamento com os valores triplicados diretamente
+print(
+    list(map( # Convertemos em uma lista para não ocorrer esgotamento
+        lambda x: x * 3, # Primeiro parâmetro  é sempre uma função
+        [1, 2, 3, 4] 
+    ))
+)

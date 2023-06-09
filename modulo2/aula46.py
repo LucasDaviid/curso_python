@@ -43,7 +43,7 @@ print(novos_produtos) # Retorna um map object
 print(hasattr(novos_produtos, '__iter__'))
 print(hasattr(novos_produtos, '__next__'))
 
-# print(list(novos_produtos)) # esgota o interator do map
+# print(list(novos_produtos)) # esgota o iterator do map
 
 print_inter(produtos)
 print_inter(novos_produtos)

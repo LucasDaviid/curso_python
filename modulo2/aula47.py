@@ -12,10 +12,15 @@ produtos = [
     {'nome': 'Produto 4', 'preco': 69.90},
 ]
 
-novos_produtos = [
-    p for p in produtos
-    if p['preco'] > 20
-]
+# novos_produtos = [  # Filtrando com list comprehension
+#     p for p in produtos
+#     if p['preco'] > 20
+# ]
+
+novos_produtos = filter(
+    lambda p: p['preco'] > 20,
+    produtos
+)
 
 print_inter(produtos)
 print_inter(novos_produtos)

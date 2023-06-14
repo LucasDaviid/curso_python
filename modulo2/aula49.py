@@ -10,3 +10,17 @@ Toda função recursiva deve ter:
 https://brasilescola.uol.com.br/matematica/fatorial.htm
 """
 
+def recursiva(inicio=0, fim=10):
+
+    print(inicio, fim)
+
+# Caso base
+    if inicio >= fim:
+        return fim
+
+# Caso recursivo: Contar até chegar ao final.
+    inicio += 1
+    return recursiva(inicio, fim)
+
+
+print(recursiva())

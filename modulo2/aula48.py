@@ -10,24 +10,25 @@ e o Produto 1 será o primeiro produto.
 from functools import reduce
 
 produtos = [
-    {'nome': 'Produto 5', 'preco': 10.00},
-    {'nome': 'Produto 1', 'preco': 22.32},
-    {'nome': 'Produto 3', 'preco': 10.11},
-    {'nome': 'Produto 2', 'preco': 105.87},
-    {'nome': 'Produto 4', 'preco': 69.90},
+    {'nome': 'Produto 5', 'preco': 10},
+    {'nome': 'Produto 1', 'preco': 22},
+    {'nome': 'Produto 3', 'preco': 2},
+    {'nome': 'Produto 2', 'preco': 6},
+    {'nome': 'Produto 4', 'preco': 4},
 ]
 def funcao_do_reduce(acumulador, produto): # Essa função recebe um acumulador e o produto
     print('Acumulador', acumulador)
     print('Produto', produto)
     print()
-    return 1
+    return acumulador + produto['preco']
 
 total = reduce(
     funcao_do_reduce, # Passamos a função do reduce
-    produtos, # Interavel
+    produtos, # Iteravel
     0  # Valor inicial
 )
 
+print('Total é', total)
 
 # total = 0
 # for p in produtos:

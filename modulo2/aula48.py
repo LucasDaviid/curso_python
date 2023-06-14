@@ -10,7 +10,9 @@ produtos = [
 ]
 
 total = 0
-for p in produtos:
-    total += p['preco']
+# for p in produtos:
+#     total += p['preco']
 
-print(total)
+# print(total)
+
+print(sum([p['preco'] for p in produtos])) # Utilizando a função sum em uma list comprehension obtemos o mesmo resultado do for acima

@@ -12,13 +12,17 @@ produtos = [
     {'nome': 'Produto 4', 'preco': 69.90},
 ]
 
+def filtrar_preco(p): 
+    return p['preco'] > 20
+
 # novos_produtos = [  # Filtrando com list comprehension
 #     p for p in produtos
 #     if p['preco'] > 20
 # ]
 
 novos_produtos = filter(
-    lambda p: p['preco'] > 20,
+    # lambda p: p['preco'] > 20,
+    filtrar_preco,
     produtos
 )
 

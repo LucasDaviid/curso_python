@@ -1,4 +1,5 @@
 #  reduce - faz a redução de um iterável em um valor
+from functools import reduce
 
 produtos = [
     {'nome': 'Produto 5', 'preco': 10.00},
@@ -8,3 +9,8 @@ produtos = [
     {'nome': 'Produto 4', 'preco': 69.90},
 ]
 
+total = 0
+for p in produtos:
+    total += p['preco']
+
+print(total)

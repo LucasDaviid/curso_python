@@ -12,5 +12,10 @@ produtos = [
     {'nome': 'Produto 4', 'preco': 69.90},
 ]
 
+novos_produtos = [
+    p for p in produtos
+    if p['preco'] > 20
+]
 
 print_inter(produtos)
+print_inter(novos_produtos)
